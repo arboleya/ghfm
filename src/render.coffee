@@ -16,7 +16,6 @@ module.exports = (filepath, done) ->
 
   config_path = path.join __dirname, 'user.oauth.json'
   unless fs.existsSync config_path
-    console.log 'Please, authenticate first'
     return register -> module.exports filepath, done
 
   token = require(config_path).token
@@ -26,7 +25,6 @@ module.exports = (filepath, done) ->
 
   request.post url, {json: data, encoding: 'utf-8'}, (req, res)->
     if ~'401 Unauthorized | 403 Forbidden'.indexOf(res.headers.status)
-      console.log 'Access denied, please authenticate again:'
       register -> module.exports filepath, done
     else
       save res.body
