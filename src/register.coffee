@@ -27,6 +27,12 @@ module.exports = (done)->
       done()
 
 login = (done)->
+  msg = """
+    > Data will no be stored and you can revoke access at any time at:
+        #{'https://github.com/settings/applications'.green}
+  """.grey
+
+  console.log "Enter your Github crendentials \n#{msg}"
   prompt.start()
 
   schema = 
