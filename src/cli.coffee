@@ -1,3 +1,5 @@
+path = require 'path'
+
 exports.help = ->
   version = require(path.join __dirname, '..', 'package.json').version
   console.log """
