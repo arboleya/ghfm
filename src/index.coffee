@@ -3,7 +3,6 @@ require('source-map-support').install()
 fs = require 'fs'
 path = require 'path'
 
-
 fsu = require 'fs-util'
 colors = require 'colors'
 
@@ -35,4 +34,4 @@ switch action
       filepath = action
       init() 
     else
-      help()
+      cli.help()
