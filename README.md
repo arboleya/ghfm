@@ -29,19 +29,14 @@ ghfm /path/to/your/markdown/file.md
 # Help
 
 ````
-Usage:
-    ghfm [path]
-    ghfm [config] [token]
+GHFM v0.1.0
+Github Flavored Markdown previwer
 
-Options:
-    config  Set your token to raise API limit to 5k/h
+Usage:
+  ghfm [path]
 
 Examples:
     ghfm /path/to/my/file.md
-    ghfm config da7d9999f91c74d11eee31beef852dd58ff0a357
-
-To generate a new token, go to:
-  https://github.com/settings/applications
 ````
 
 # Why?
