@@ -3,6 +3,8 @@
 [Github Flavored Markdown](http://github.github.com/github-flavored-markdown/)
 previewer with 100% fidelity.
 
+![GHFM - Github Flavored Markdown Previewer](assets/screenshot.png)
+
 # Installation
 
 ```bash
@@ -22,7 +24,7 @@ ghfm /path/to/your/markdown/file.md
   - Serves it at [http://localhost:54321](http://localhost:54321)
   - Watch your `markdown` file for change
   - Re-render `html` on every change
-  - Pushes updates down the wire to your browser
+  - Pushes updates down the wire to connect browsers/devices
 
 # Help
 
@@ -64,16 +66,8 @@ default [Online Editor](https://github.com/arboleya/ghfm/edit/master/README.md)
 which lets you preview your `markdown` exactly the way it'll behavior when
 pushed to Github.
 
-But it's kinda painful to edit files:
- - inside a `textarea`
- - pressing `preview` to see it live
- - detecting errors
- - pressing `code` to edit it again
- - making changes
- - pressing `preview` to see it live
- - detecting errors
- - pressing `code` to edit it again
- - [...]
+But it's kinda painful to edit files inside a `textarea` and keep switching
+between `code` and `preview` mode, without mentioning the slowness.
 
 # License
 

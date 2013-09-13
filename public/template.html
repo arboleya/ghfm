@@ -1,9 +1,10 @@
 <html>
 <head>
   <meta charset="utf8"></meta>
-  <title></title>
+  <title>GHFM - Github Flavored Markdown Previewer</title>
   <link rel="stylesheet" type="text/css" href="https://github.global.ssl.fastly.net/assets/github-a519fa01e3b08983e91c1cc20d53d362af289489.css">
   <link rel="stylesheet" type="text/css" href="https://github.global.ssl.fastly.net/assets/github2-4227a5af2b2917601978281e240aa06e4fe1c1dc.css">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="/socket.io.js"></script>
   <script type="text/javascript" src="/refresher.js"></script>
 </head>
@@ -11,7 +12,9 @@
   <div style="width: 790px; margin-left: -395px; left: 50%; position: absolute">
     <div id="readme" class="clearfix announce instapaper_body md">
       <article class="markdown-body entry-content" itemprop="mainContentOfPage">
-        ~CONTENT
+        <div id="ghfm">
+          ~CONTENT
+        </div>
       </article>
     </div>
   </div>
