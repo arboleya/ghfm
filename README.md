@@ -1,4 +1,4 @@
-# GHFM - Github
+# GHFM
 
 [Github Flavored Markdown](http://github.github.com/github-flavored-markdown/)
 previewer with 100% fidelity.
@@ -19,50 +19,22 @@ ghfm /path/to/your/markdown/file.md
 
 # How it works:
   
-  - Render your `markdown` file to `html` using
+  1. Render your `markdown` file to `html` using
   [Github API](http://developer.github.com/v3/markdown/)
-  - Serves it at [http://localhost:54321](http://localhost:54321)
-  - Watch your `markdown` file for change
-  - Re-render `html` on every change
-  - Pushes updates down the wire to connect browsers/devices
+  1. Serves it at [http://localhost:54321](http://localhost:54321)
+  1. Open a browser window for you to see it
+  1. Watch your `markdown` file for changes
+  1. Re-render `html` on every change
+  1. Pushes updates down the wire to connected browsers/devices
 
-# Help
+# Github credentials
 
-````
-GHFM v0.1.0
-Github Flavored Markdown previwer
+As you will probably save your document too many times per minute, it'd probably
+exceed the API calls limit, which is 60 per hour. To fix that, you will ask to
+enter your Github credentials first, then a token will be generated for you,
+and your limit will raise to 5000 per hour. It should be enough.
 
-Usage:
-  ghfm [path]
-
-Examples:
-    ghfm /path/to/my/file.md
-````
-
-# Why?
-
-Because I got sick of editing `markdown` files locally, pushing them to Github
-and detecting:
-
-  - Syntax problems
-  - Formatting issues
-  - Incompatibilities in general
-
-This project addresses all these problems you'll find with tools such as:
-
- 1. [Mou](http://mouapp.com/)
- 1. [Marked](http://markedapp.com/)
- 1. And others
-
-# Alternatives
-
-The only alternative I've found to solve this situation was using the Github
-default [Online Editor](https://github.com/arboleya/ghfm/edit/master/README.md)
-which lets you preview your `markdown` exactly the way it'll behavior when
-pushed to Github.
-
-But it's kinda painful to edit files inside a `textarea` and keep switching
-between `code` and `preview` mode, without mentioning the slowness.
+> Username and password is never stored, it's used once, and once only.
 
 # License
 
