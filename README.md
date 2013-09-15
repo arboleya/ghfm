@@ -12,7 +12,7 @@ npm install -g ghfm
 ````
 
 # Usage
-
+ 
 ````bash
 ghfm /path/to/your/markdown/file.md
 ````
@@ -30,9 +30,9 @@ ghfm /path/to/your/markdown/file.md
 # Github credentials
 
 As you will probably save your document too many times per minute, it'd probably
-exceed the API calls limit, which is 60 per hour. To fix that, you will ask to
-enter your Github credentials first, then a token will be generated for you,
-and your limit will raise to 5000 per hour. It should be enough.
+exceed the API calls limit, which is 60 per hour. To fix that, you will be asked
+to enter your Github credentials, then a token will be generated for you and
+your limit will raise to 5,000 calls per hour. It should be enough.
 
 > Username and password is never stored, it's used once, and once only.
 
