@@ -10,9 +10,10 @@ index = path.join publ1c, 'index.html'
 template = path.join publ1c, 'template.html'
 template = fs.readFileSync template, 'utf-8'
 
+css = []
+
 module.exports = (filepath, done) ->
   buffer = fs.readFileSync filepath, 'utf-8'
-
 
   config_path = path.join __dirname, 'user.oauth.json'
   unless fs.existsSync config_path
@@ -30,5 +31,18 @@ module.exports = (filepath, done) ->
       save res.body
       done res.body
 
+get_css_paths = ( done )->
+  request 'http://github.com', (err, res, body)->
+    if err is null and res.statusCode is 200
+      css = body.match /https?:\/\/github.+github2?-[0-9a-z]+\.css/g
+      done()
+
 save = (html)->
-  fs.writeFileSync index, template.replace '~CONTENT', html
+  if css.length is 0
+    return get_css_paths -> save html
+
+  buffer = template.replace '~CONTENT', html
+  buffer = buffer.replace '~CSS1', css[0]
+  buffer = buffer.replace '~CSS2', css[1]
+
+  fs.writeFileSync index, buffer
