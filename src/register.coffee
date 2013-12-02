@@ -12,6 +12,7 @@ module.exports = (done)->
 
     url = 'https://api.github.com/authorizations/clients/' + client_id
     options = 
+      headers: 'User-Agent': 'GHFM'
       auth: {user, pass}
       body: JSON.stringify
         note: 'GHFM - Github Flavored Markdown Previewer'

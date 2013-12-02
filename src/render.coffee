@@ -24,7 +24,12 @@ module.exports = (filepath, done) ->
   url = 'https://api.github.com/markdown?access_token=' + token
   data = text: buffer, mode: 'markdown'
 
-  request.post url, {json: data, encoding: 'utf-8'}, (req, res)->
+  options = 
+    headers: 'User-Agent': 'GHFM'
+    json: data
+    encoding: 'utf-8'
+
+  request.post url, options, (req, res)->
     if ~'401 Unauthorized | 403 Forbidden'.indexOf(res.headers.status)
       register -> module.exports filepath, done
     else
