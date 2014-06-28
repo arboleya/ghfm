@@ -24,7 +24,7 @@ module.exports = (filepath, done) ->
   url = 'https://api.github.com/markdown?access_token=' + token
   data = text: buffer, mode: 'markdown'
 
-  options = 
+  options =
     headers: 'User-Agent': 'GHFM'
     json: data
     encoding: 'utf-8'
@@ -39,7 +39,7 @@ module.exports = (filepath, done) ->
 get_css_paths = ( done )->
   request 'http://github.com', (err, res, body)->
     if err is null and res.statusCode is 200
-      css = body.match /https?:\/\/github.+github2?-[0-9a-z]+\.css/g
+      css = body.match /https?:\/\/.+\.css/g
       done()
 
 save = (html)->
