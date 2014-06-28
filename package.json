@@ -9,7 +9,7 @@
   "dirs": {},
   "repository": {
     "type": "git",
-    "url": "http://github.com/serpentem/polvo"
+    "url": "http://github.com/arboleya/ghfm"
   },
   "bin": {
     "ghfm": "./bin/ghfm"
