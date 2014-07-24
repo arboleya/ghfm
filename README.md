@@ -36,6 +36,12 @@ your limit will raise to 5,000 calls per hour. It should be enough.
 
 > Username and password is never stored, it's used once, and once only.
 
+## Two factor authentication
+
+In case you're already using [2FA](https://help.github.com/articles/about-two-factor-authentication) on Github, please refer to this issue:
+https://github.com/arboleya/ghfm/issues/3#issuecomment-42074126
+
+
 # License
 
 The MIT License (MIT)
